@@ -8,12 +8,12 @@ html, body {
     box-sizing: border-box;
 }
 
-.container-fluid {
+aside{
     min-height: 100vh;
 }
 
 /* carrousel */
-#carrousel { background-color: tomato; }
+#carousel { background-color: tomato; }
 
 /* vantagens */
 #vantagens { background-color: darkslateblue;}
