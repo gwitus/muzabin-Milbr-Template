@@ -2,19 +2,67 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Milbr</title>
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="public/css/style.css">
   </head>
   <body>
-    <main>
-      <aside id="carousel"></aside>
-      <aside id="vantagens"></aside>
-      <aside id="precos"></aside>
-      <aside id="localizacao"></aside>
-    </main>
-    <footer></footer>
+    <style> body { display: none; } aside{ border-bottom: 1px solid rgb(233, 138, 138);}</style>
+    <script>
+    // Paginas
+
+    var allText = "",
+    Require = {
+        diretorios : [
+            "Carrosel","Nossas-Vantagens",
+            "Nossos-Planos","Icones",
+            "Endereco","Footer",
+        ],
+    };
+
+    window.onload = function(){
+        
+        for(obj of Require["diretorios"]){
+            try {
+
+                // Importa html
+                readHTML(obj)
+
+                // Importa css
+                css_link = $("<link>", {
+                    rel: "stylesheet",
+                    type: "text/css",
+                    href: obj+"/style.css"
+                }).appendTo('head'); 
+
+                //Importa js
+                $.getScript(obj+"/script.js")
+
+            } catch (error) {
+                console.log("")
+            }
+        }
+        console.clear()
+        $(document.body).append(allText)
+        setTimeout(() => {
+            $("body").show()
+        }, 800);
+    }
+
+    function readHTML(file)
+    {
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file+"/index.html", false);
+        rawFile.onreadystatechange = function(){
+            try {
+                allText += "<aside>"+(((rawFile.responseText).split("<body>")[1]).split("</body>")[0]).replaceAll("src=\"", "src=\""+file.split("/")[0]+"/")+"</aside>";
+            } catch (error) {
+                allText += "<aside></aside>"
+            }
+        }
+        rawFile.send(null);
+    }
+    </script>
+    <script src="public/js/jquery-3.6.4.min.js"></script>
     <script src="public/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
