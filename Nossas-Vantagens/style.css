@@ -44,8 +44,8 @@ aside{
 #nossasVantagensTitulo {
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 800;
-    font-size: 6rem;
+    font-weight: bolder;
+    font-size: 7rem;
     line-height: 68px;
     color: #185787;
     height: auto;
@@ -56,9 +56,10 @@ aside{
     width: 90%;
     height: 80%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 24vw 24vw 24vw;
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
+    justify-content: space-between;
 }
 
 #nossasVantagensQuadrado {
@@ -72,8 +73,8 @@ aside{
 .nossasVantagensTopo {
     display: grid;
     place-items: center;
-    width: 4rem;
-    height: 4rem;
+    width: 4vw;
+    height: 4vw;
     background: linear-gradient(0deg, rgba(215, 215, 215, 0.2), rgba(215, 215, 215, 0.2)), rgba(217, 217, 217, 0.2);
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 7px;
@@ -101,12 +102,12 @@ aside{
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 800;
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 30px;
     /* identical to box height */
     color: #246590;
-    width: 70%;
-    text-align: justify;
+    width: 90%;
+    text-align: start;
 }
 
 #nossasVantagensTituloBaixo3 {
@@ -133,10 +134,10 @@ aside{
 
 #nossasVantagensDescricaoQuadrado h4 {
     font-size: 1.4rem;
-    text-align: justify;
+    text-align: start;
 }
 
 #nossasVantagensDescricaoQuadrado3 h4{
     font-size: 1.4rem;
-    text-align: justify;
+    text-align: start;
 }
