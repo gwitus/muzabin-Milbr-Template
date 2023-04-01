@@ -38,14 +38,14 @@ aside{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
 }
 
 #nossasVantagensTitulo {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 800;
-    font-size: 5rem;
+    font-size: 6rem;
     line-height: 68px;
     color: #185787;
     height: auto;
@@ -58,6 +58,7 @@ aside{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 2rem;
 }
 
 #nossasVantagensQuadrado {
@@ -100,10 +101,24 @@ aside{
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 800;
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 30px;
     /* identical to box height */
     color: #246590;
+    width: 70%;
+    text-align: justify;
+}
+
+#nossasVantagensTituloBaixo3 {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 30px;
+    /* identical to box height */
+    color: #246590;
+    width: 90%;
+    text-align: justify;
 }
 
 #nossasVantagensDescricaoQuadrado {
@@ -111,6 +126,17 @@ aside{
     height: auto;
 }
 
+#nossasVantagensDescricaoQuadrado3 {
+    width: 90%;
+    height: auto;
+}
+
 #nossasVantagensDescricaoQuadrado h4 {
     font-size: 1.4rem;
+    text-align: justify;
+}
+
+#nossasVantagensDescricaoQuadrado3 h4{
+    font-size: 1.4rem;
+    text-align: justify;
 }
