@@ -3,6 +3,8 @@
 html, body {
     height: 100%;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 * {
@@ -13,6 +15,7 @@ html, body {
 
 aside{
     min-height: 100vh;
+    position: relative;
 }
 
 /* carrousel */
@@ -29,7 +32,6 @@ aside{
     height: 100%;
     display: grid;
     place-items: center;
-    position: relative;
 }
 
 .NossasVantagensContainer {
@@ -37,9 +39,9 @@ aside{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 3rem;
+    gap: 4rem;
     z-index: 2;
 }
 
@@ -59,7 +61,7 @@ aside{
     height: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 2rem;
 }
 
@@ -68,14 +70,14 @@ aside{
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .nossasVantagensTopo {
     display: grid;
     place-items: center;
-    width: 4rem;
-    height: 4rem;
+    width:  6rem;
+    height: 6rem;
     background: linear-gradient(0deg, rgba(215, 215, 215, 0.2), rgba(215, 215, 215, 0.2)), rgba(217, 217, 217, 0.2);
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 7px;
@@ -144,9 +146,9 @@ aside{
 }
 
 svg {
-    width:  100%;
-    height: 100%;
-    z-index: 1;
     position: absolute;
     top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
